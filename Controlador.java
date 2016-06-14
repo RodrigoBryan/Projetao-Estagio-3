@@ -94,19 +94,18 @@ public class Controlador implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rsrcs) {
-        assert colName != null : "fx:id=\"colName\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        //assert colStatus != null : "fx:id=\"colStatus\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert colSynopsis != null : "fx:id=\"colSynopsis\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert deleteIssue != null : "fx:id=\"deleteIssue\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert descriptionValue != null : "fx:id=\"descriptionValue\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert descriptionValue2 != null : "fx:id=\"descriptionValue2\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert details != null : "fx:id=\"details\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert displayedIssueLabel != null : "fx:id=\"displayedIssueLabel\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert newIssue != null : "fx:id=\"newIssue\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert saveIssue != null : "fx:id=\"saveIssue\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert synopsis != null : "fx:id=\"synopsis\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert table != null : "fx:id=\"table\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
-        assert list != null : "fx:id=\"list\" was not injected: check your FXML file 'IssueTrackingLite.fxml'.";
+        assert colName != null : "fx:id=\"colName\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert colSynopsis != null : "fx:id=\"colSynopsis\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert deleteIssue != null : "fx:id=\"deleteIssue\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert descriptionValue != null : "fx:id=\"descriptionValue\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert descriptionValue2 != null : "fx:id=\"descriptionValue2\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert details != null : "fx:id=\"details\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert displayedIssueLabel != null : "fx:id=\"displayedIssueLabel\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert newIssue != null : "fx:id=\"newIssue\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert saveIssue != null : "fx:id=\"saveIssue\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert synopsis != null : "fx:id=\"synopsis\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert table != null : "fx:id=\"table\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
+        assert list != null : "fx:id=\"list\" was not injected: check your FXML file 'Tela Aplicacao.fxml'.";
 
         System.out.println(this.getClass().getSimpleName() + ".initialize");
         configureButtons();
@@ -710,14 +709,14 @@ public class Controlador implements Initializable {
         if (newProjectName != null) {
         	if(newProjectName == "Matriculas"){
                 colName.setCellValueFactory(new PropertyValueFactory<ObservableIssue, String>("synopsis"));
-                colName.setText("Código Aluno");
+                colName.setText("CÃ³digo Aluno");
                 colSynopsis.setCellValueFactory(new PropertyValueFactory<ObservableIssue, String>("description"));
-                colSynopsis.setText("Código Disciplina");
+                colSynopsis.setText("CÃ³digo Disciplina");
         	} else {
                 colName.setCellValueFactory(new PropertyValueFactory<ObservableIssue, String>("cod"));
-                colName.setText("Código");
+                colName.setText("CÃ³digo");
                 colSynopsis.setCellValueFactory(new PropertyValueFactory<ObservableIssue, String>("synopsis"));
-                colSynopsis.setText("Descrição");
+                colSynopsis.setText("DescriÃ§Ã£o");
         	}
             table.getItems().clear();
             displayedIssues = model.getIssueIds(newProjectName);
